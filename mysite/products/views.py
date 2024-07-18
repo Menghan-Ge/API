@@ -20,6 +20,6 @@ def listproducts(request):
 
 @api_view(['GET', 'POST'])
 def listmessages(request):
-    message_obj = Message('menghan.ge@stratiphy.io', 'Hello...')
+    message_obj = Message('admin@admin.io', 'Hello...')
     serializer_class = MessageSerializer(message_obj)
     return Response(serializer_class.data)
