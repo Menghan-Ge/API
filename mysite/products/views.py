@@ -10,7 +10,7 @@ from .test import Message
 
 
 @api_view(['GET', 'POST'])
-# @permission_classes(IsAuthenticated)
+@permission_classes(IsAuthenticated)
 def listproducts(request):
     products = Product.objects.all()  # there is so many produts will be there it can be tricked.
     serializer_class = ProductSerializer(products, many=True)
